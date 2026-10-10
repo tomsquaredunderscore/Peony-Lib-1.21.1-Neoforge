@@ -46,8 +46,7 @@ displayName="${mod_name}" #mandatory
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
-'''
+ §d§oPeony-Lib is a Library Mod For a handful of mods made by, You guessed it,§r§5§l§o The Peony Dev Team§r§d§o. This Library adds Simple features that we need to have used in my other mods but instead of remaking them we just place them in here to be refrenced to. also adds some §r§5§l§oplushie easter eggs§r§d§o and junk for fun'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
