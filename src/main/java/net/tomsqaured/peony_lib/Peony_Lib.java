@@ -4,18 +4,9 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
+
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
+
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -25,10 +16,11 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.tomsqaured.peony_lib.blocks.PeonyBlockEntities;
+import net.tomsqaured.peony_lib.blocks.PeonyBlocks;
+import net.tomsqaured.peony_lib.items.PeonyItems;
+import net.tomsqaured.peony_lib.sound.PeonySounds;
+
 
 @Mod(Peony_Lib.MOD_ID)
 public class Peony_Lib {
@@ -38,6 +30,14 @@ public class Peony_Lib {
 
     public Peony_Lib(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+
+
+
+        PeonySounds.register(modEventBus);
+        PeonyBlocks.register(modEventBus);
+        PeonyBlockEntities.register(modEventBus);
+        PeonyItems.register(modEventBus);
+        
 
 
         NeoForge.EVENT_BUS.register(this);

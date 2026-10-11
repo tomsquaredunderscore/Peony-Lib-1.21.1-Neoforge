@@ -1,0 +1,82 @@
+{
+  "tom_plushie_voice_lines_1": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_1",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_2": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_2",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_3": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_3",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_4": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_4",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_5": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_5",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_6": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_6",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_7": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_7",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_8": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_8",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_9": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_9",
+        "stream": false
+      }
+    ]
+  },
+  "tom_plushie_voice_lines_10": {
+    "sounds": [
+      {
+        "name": "peony_lib:tom_plushie_voice_lines_10",
+        "stream": false
+      }
+    ]
+  }
+}
