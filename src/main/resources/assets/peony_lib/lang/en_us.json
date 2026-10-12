@@ -8,7 +8,15 @@
   "block.peony_lib.tom_plushie": "Tom Plushie",
   "block.peony_lib.ryan_plushie": "LemonSkyRyan Plushie",
   "block.peony_lib.shendi_plushie": "Shendi Plushie",
+  "block.peony_lib.ova_plushie": "OvaAlpha3 Plushie",
+  "block.peony_lib.jack_plushie": "Discreethorn Plushie",
+  "block.peony_lib.shalambian_plushie": "Shalambian Plushie",
+  "block.peony_lib.kaninschenspeed_plushie": "Kaninschenspeed Plushie",
   "item.peony_lib.tom_plushie.desc": "Original Tom - Mod Owner",
   "item.peony_lib.ryan_plushie.desc": "Original LemonSkyRayan - Cool Creator",
-  "item.peony_lib.shendi_plushie.desc": "Original Shendi - Co Mod Owner"
+  "item.peony_lib.shendi_plushie.desc": "Original Shendi - Co Mod Owner",
+  "item.peony_lib.ova_plushie.desc": "Original OvaAlpha3 - Structures",
+  "item.peony_lib.jack_plushie.desc": "Original Discreethorn - Textures and models",
+  "item.peony_lib.kaninschenspeed_plushie.desc": "Original Kaninschenspeed - Helper",
+  "item.peony_lib.shalambian_plushie.desc": "Original Shalambian - Culinary Helper"
 }

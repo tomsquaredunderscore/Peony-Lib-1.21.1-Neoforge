@@ -87,6 +87,14 @@
       }
     ]
   },
+  "placeholder_2": {
+    "sounds": [
+      {
+        "name": "peony_lib:placeholder_2",
+        "stream": false
+      }
+    ]
+  },
   "tom_plushie_voice_lines_10": {
     "sounds": [
       {

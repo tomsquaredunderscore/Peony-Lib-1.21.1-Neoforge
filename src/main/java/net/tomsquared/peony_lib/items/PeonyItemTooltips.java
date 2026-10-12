@@ -22,6 +22,18 @@ public class PeonyItemTooltips {
         } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.RYAN_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.ryan_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
+        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.OVA_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.ova_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
+        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.JACK_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.jack_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
+        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.KANINSCHENSPEED_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.kaninschenspeed_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
+        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.SHALAMBIAN_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.shalambian_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
         }
     }
 }

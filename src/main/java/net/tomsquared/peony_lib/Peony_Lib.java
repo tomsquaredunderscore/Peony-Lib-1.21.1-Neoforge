@@ -53,6 +53,13 @@ public class Peony_Lib {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
+            event.accept(PeonyItems.TOM_PLUSHIE.get());
+            event.accept(PeonyItems.SHENDI_PLUSHIE.get());
+            event.accept(PeonyItems.OVA_PLUSHIE.get());
+            event.accept(PeonyItems.JACK_PLUSHIE.get());
+            event.accept(PeonyItems.SHALAMBIAN_PLUSHIE.get());
+            event.accept(PeonyItems.KANINSCHENSPEED_PLUSHIE.get());
+            event.accept(PeonyItems.RYAN_PLUSHIE.get());
 
         }
     }

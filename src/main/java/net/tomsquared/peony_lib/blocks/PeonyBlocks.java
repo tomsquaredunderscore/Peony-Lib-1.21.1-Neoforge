@@ -23,7 +23,8 @@ public class PeonyBlocks {
                             .destroyTime(0.2f)
                             .noOcclusion(),
 
-                    PeonySounds.TOM_PLUSHIE_VOICE_LINES_3.get()
+                    PeonySounds.TOM_PLUSHIE_VOICE_LINES_3.get(),
+                    PeonySounds.TOM_PLUSHIE_VOICE_LINES_1.get()
 
             ));
 
@@ -38,6 +39,27 @@ public class PeonyBlocks {
                     PeonySounds.PLACEHOLDER_1.get()
             ));
 
+    public static final DeferredHolder<Block, PeonyPlushyBlock> OVA_PLUSHIE = BLOCKS.register("ova_plushie",
+            () -> new PeonyPlushyBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .strength(0.8F)
+                            .destroyTime(0.2f)
+                            .noOcclusion(),
+
+                    PeonySounds.PLACEHOLDER_2.get()
+            ));
+    public static final DeferredHolder<Block, PeonyPlushyBlock> JACK_PLUSHIE = BLOCKS.register("jack_plushie",
+            () -> new PeonyPlushyBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .strength(0.8F)
+                            .destroyTime(0.2f)
+                            .noOcclusion(),
+
+                    PeonySounds.PLACEHOLDER_2.get()
+            ));
+
     public static final DeferredHolder<Block, PeonyPlushyBlock> RYAN_PLUSHIE = BLOCKS.register("ryan_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
@@ -46,6 +68,29 @@ public class PeonyBlocks {
                             .destroyTime(0.2f)
                             .noOcclusion(),
                     PeonySounds.RYAN_PLUSHIE_VOICE_LINES_1.get()
+
+            ));
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> KANINSCHENSPEED_PLUSHIE = BLOCKS.register("kaninschenspeed_plushie",
+            () -> new PeonyPlushyBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .strength(0.8F)
+                            .destroyTime(0.2f)
+                            .noOcclusion(),
+                    PeonySounds.PLACEHOLDER_2.get(),
+                    PeonySounds.PLACEHOLDER_1.get()
+
+            ));
+    public static final DeferredHolder<Block, PeonyPlushyBlock> SHALAMBIAN_PLUSHIE = BLOCKS.register("shalambian_plushie",
+            () -> new PeonyPlushyBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(net.minecraft.world.level.block.SoundType.WOOL)
+                            .strength(0.8F)
+                            .destroyTime(0.2f)
+                            .noOcclusion(),
+                    PeonySounds.PLACEHOLDER_2.get(),
+                    PeonySounds.PLACEHOLDER_1.get()
 
             ));
 

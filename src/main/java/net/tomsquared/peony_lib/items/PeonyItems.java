@@ -19,6 +19,7 @@ public class PeonyItems {
         () -> new PeonyPlushies(
                 PeonyBlocks.TOM_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
+                PeonySounds.TOM_PLUSHIE_VOICE_LINES_1.get(),
                 PeonySounds.TOM_PLUSHIE_VOICE_LINES_3.get()
 
         ));
@@ -28,6 +29,38 @@ public class PeonyItems {
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
 
                 PeonySounds.PLACEHOLDER_1.get()
+        ));
+    public static final DeferredHolder<Item, PeonyPlushies> OVA_PLUSHIE = ITEMS.register("ova_plushie",
+        () -> new PeonyPlushies(
+                PeonyBlocks.OVA_PLUSHIE.get(),
+                new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
+
+                PeonySounds.PLACEHOLDER_2.get()
+        ));
+    public static final DeferredHolder<Item, PeonyPlushies> JACK_PLUSHIE = ITEMS.register("jack_plushie",
+        () -> new PeonyPlushies(
+                PeonyBlocks.JACK_PLUSHIE.get(),
+                new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
+
+                PeonySounds.PLACEHOLDER_2.get()
+        ));
+    public static final DeferredHolder<Item, PeonyPlushies> KANINSCHENSPEED_PLUSHIE = ITEMS.register("kaninschenspeed_plushie",
+        () -> new PeonyPlushies(
+                PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
+                new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
+
+                PeonySounds.PLACEHOLDER_2.get(),
+                PeonySounds.PLACEHOLDER_1.get()
+
+        ));
+    public static final DeferredHolder<Item, PeonyPlushies> SHALAMBIAN_PLUSHIE = ITEMS.register("shalambian_plushie",
+        () -> new PeonyPlushies(
+                PeonyBlocks.SHALAMBIAN_PLUSHIE.get(),
+                new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
+
+                PeonySounds.PLACEHOLDER_2.get(),
+                PeonySounds.PLACEHOLDER_1.get()
+
         ));
     public static final DeferredHolder<Item, PeonyPlushies> RYAN_PLUSHIE = ITEMS.register("ryan_plushie",
         () -> new PeonyPlushies(

@@ -25,6 +25,7 @@ public class PeonySounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_10 = register("tom_plushie_voice_lines_10");
     public static final DeferredHolder<SoundEvent, SoundEvent> RYAN_PLUSHIE_VOICE_LINES_1 = register("ryan_plushie_voice_lines_1");
   public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_1 = register("placeholder_1");
+  public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_2 = register("placeholder_2");
 
     private static DeferredHolder<SoundEvent, SoundEvent> register(String name) {
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Peony_Lib.MOD_ID, name);
