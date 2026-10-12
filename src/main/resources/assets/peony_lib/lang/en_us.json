@@ -4,5 +4,11 @@
   "peony_lib.configuration.section.peony_lib.common.toml": "Peony Lib Configs",
   "peony_lib.configuration.section.peony_lib.common.toml.title": "Peony Lib Configs",
   "peony_lib.configuration.areyougay": "Are You Gay?",
-  "peony_lib.configuration.howgay": "How Gay Are You?"
+  "peony_lib.configuration.howgay": "How Gay Are You?",
+  "block.peony_lib.tom_plushie": "Tom Plushie",
+  "block.peony_lib.ryan_plushie": "LemonSkyRyan Plushie",
+  "block.peony_lib.shendi_plushie": "Shendi Plushie",
+  "item.peony_lib.tom_plushie.desc": "Original Tom - Mod Owner",
+  "item.peony_lib.ryan_plushie.desc": "Original LemonSkyRayan - Cool Creator",
+  "item.peony_lib.shendi_plushie.desc": "Original Shendi - Co Mod Owner"
 }

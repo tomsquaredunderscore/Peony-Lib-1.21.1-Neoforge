@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "peony_lib:block/shendi_plushie" },
+    "facing=south": { "model": "peony_lib:block/shendi_plushie", "y": 180 },
+    "facing=west":  { "model": "peony_lib:block/shendi_plushie", "y": 270 },
+    "facing=east":  { "model": "peony_lib:block/shendi_plushie", "y": 90 }
+  }
+}

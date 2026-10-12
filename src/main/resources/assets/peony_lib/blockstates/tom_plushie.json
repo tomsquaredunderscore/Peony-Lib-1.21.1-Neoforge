@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "peony_lib:block/tom_plushie" }
+    "facing=north": { "model": "peony_lib:block/tom_plushie" },
+    "facing=south": { "model": "peony_lib:block/tom_plushie", "y": 180 },
+    "facing=west":  { "model": "peony_lib:block/tom_plushie", "y": 270 },
+    "facing=east":  { "model": "peony_lib:block/tom_plushie", "y": 90 }
   }
 }

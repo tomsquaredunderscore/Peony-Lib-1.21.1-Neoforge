@@ -71,6 +71,22 @@
       }
     ]
   },
+  "ryan_plushie_voice_lines_1": {
+    "sounds": [
+      {
+        "name": "peony_lib:ryan_plushie_voice_lines_1",
+        "stream": false
+      }
+    ]
+  },
+  "placeholder_1": {
+    "sounds": [
+      {
+        "name": "peony_lib:placeholder_1",
+        "stream": false
+      }
+    ]
+  },
   "tom_plushie_voice_lines_10": {
     "sounds": [
       {
