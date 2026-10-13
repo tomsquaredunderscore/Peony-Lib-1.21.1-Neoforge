@@ -34,6 +34,12 @@ public class PeonyItemTooltips {
         } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.SHALAMBIAN_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.shalambian_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
+        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.POTATOWOLFIE_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.potatowolfie_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
+        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.TIE_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.tie_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
         }
     }
 }

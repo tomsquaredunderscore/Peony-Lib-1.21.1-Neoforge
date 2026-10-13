@@ -19,6 +19,8 @@ public class PeonyBlockEntities {
                             PeonyBlocks.TOM_PLUSHIE.get(),
                             PeonyBlocks.SHENDI_PLUSHIE.get(),
                             PeonyBlocks.RYAN_PLUSHIE.get(),
+                            PeonyBlocks.POTATOWOLFIE_PLUSHIE.get(),
+                            PeonyBlocks.TIE_PLUSHIE.get(),
                             PeonyBlocks.OVA_PLUSHIE.get(),
                             PeonyBlocks.JACK_PLUSHIE.get(),
                             PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
