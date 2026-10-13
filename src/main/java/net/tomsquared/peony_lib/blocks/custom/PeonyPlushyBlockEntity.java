@@ -7,17 +7,25 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import java.util.List;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
+import java.util.List;
+
+import static net.tomsquared.peony_lib.blocks.FoodPortionBlock.PORTIONS_TAKEN;
+
 
 public class PeonyPlushyBlockEntity extends BlockEntity {
     private static final int ANIMATION_TICKS = 10;
     private static final String START_TICK = "squishStartTick";
 
     private long squishStartTick = -1L;
+
     public PeonyPlushyBlockEntity(BlockPos pos, BlockState state) {
         super(PeonyBlockEntities.TOM_PLUSHIE.get(), pos, state);
     }

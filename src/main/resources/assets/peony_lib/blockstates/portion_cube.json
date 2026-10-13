@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "portions_taken=0": {
+      "model": "peony_lib:block/pizza_full_base"
+    },
+    "portions_taken=1": {
+      "model": "peony_lib:block/pizza_3_base"
+    },
+    "portions_taken=2": {
+      "model": "peony_lib:block/pizza_2_base"
+    },
+    "portions_taken=3": {
+      "model": "peony_lib:block/pizza_1_base"
+    }
+  }
+}

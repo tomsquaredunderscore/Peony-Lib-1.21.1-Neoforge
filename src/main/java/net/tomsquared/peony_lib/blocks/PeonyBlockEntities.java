@@ -22,7 +22,8 @@ public class PeonyBlockEntities {
                             PeonyBlocks.OVA_PLUSHIE.get(),
                             PeonyBlocks.JACK_PLUSHIE.get(),
                             PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
-                            PeonyBlocks.SHALAMBIAN_PLUSHIE.get()
+                            PeonyBlocks.SHALAMBIAN_PLUSHIE.get(),
+                            PeonyBlocks.CUBE.get()
                     ).build(null));
 
     public static void register(IEventBus eventBus) {

@@ -1,13 +1,17 @@
 package net.tomsquared.peony_lib.items;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tomsquared.peony_lib.Peony_Lib;
 import net.tomsquared.peony_lib.blocks.PeonyBlocks;
+import net.tomsquared.peony_lib.items.custom.PeonyFoodBlockItem;
 import net.tomsquared.peony_lib.items.custom.PeonyPlushies;
 import net.tomsquared.peony_lib.sound.PeonySounds;
 
@@ -69,6 +73,31 @@ public class PeonyItems {
                 PeonySounds.RYAN_PLUSHIE_VOICE_LINES_1.get()
 
         ));
+
+    public static final DeferredHolder<Item, PeonyFoodBlockItem> CUBE =
+            ITEMS.register("cube", () -> new PeonyFoodBlockItem(
+                    PeonyBlocks.CUBE.get(),
+                    new Item.Properties()
+                            .food(new FoodProperties.Builder()
+                                    .nutrition(6)
+                                    .saturationModifier(0.6f)
+                                    .build())
+                            .stacksTo(64)
+            ));
+
+    public static final DeferredHolder<Item, Item> PIZZA_SLICE =
+            ITEMS.register("portion_cube_slice",
+                    () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                            .nutrition(3)
+                            .saturationModifier(0.1f)
+                            .build())));
+
+    public static final DeferredHolder<Item, Item> FULL_PIZZA =
+            ITEMS.register("portion_cube",
+                    () -> new BlockItem(
+                            PeonyBlocks.PIZZA.get(),
+                            new Item.Properties()
+                    ));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

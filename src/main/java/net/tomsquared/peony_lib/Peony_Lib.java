@@ -60,6 +60,9 @@ public class Peony_Lib {
             event.accept(PeonyItems.SHALAMBIAN_PLUSHIE.get());
             event.accept(PeonyItems.KANINSCHENSPEED_PLUSHIE.get());
             event.accept(PeonyItems.RYAN_PLUSHIE.get());
+            event.accept(PeonyItems.FULL_PIZZA.get());
+            event.accept(PeonyItems.PIZZA_SLICE.get());
+            event.accept(PeonyItems.CUBE.get());
 
         }
     }
