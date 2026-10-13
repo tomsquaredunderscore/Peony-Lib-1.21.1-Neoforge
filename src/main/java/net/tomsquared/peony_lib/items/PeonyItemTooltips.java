@@ -6,6 +6,7 @@ import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.tomsquared.peony_lib.Peony_Lib;
+import net.tomsquared.peony_lib.items.custom.PeonyPlushies;
 
 @EventBusSubscriber(modid = Peony_Lib.MOD_ID)
 public class PeonyItemTooltips {
@@ -40,6 +41,10 @@ public class PeonyItemTooltips {
         } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.TIE_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.tie_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
+        }
+          if (stack.getItem() instanceof PeonyPlushies && PeonyPlushies.isMuted(stack)) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.plushie.muted")
+                    .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
         }
     }
 }

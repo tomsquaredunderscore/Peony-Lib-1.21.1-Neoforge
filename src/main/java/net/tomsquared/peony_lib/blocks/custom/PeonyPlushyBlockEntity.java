@@ -7,24 +7,19 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.util.Mth;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import java.util.List;
-import net.minecraft.world.level.storage.loot.LootParams;
 import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
-import java.util.List;
-
-import static net.tomsquared.peony_lib.blocks.FoodPortionBlock.PORTIONS_TAKEN;
-
 
 public class PeonyPlushyBlockEntity extends BlockEntity {
     private static final int ANIMATION_TICKS = 10;
     private static final String START_TICK = "squishStartTick";
+    private static final String MUTED = "muted";
+    private static final String LAST_SIGNAL = "lastSignal";
 
     private long squishStartTick = -1L;
+    private boolean muted;
+    private int lastSignal;
 
     public PeonyPlushyBlockEntity(BlockPos pos, BlockState state) {
         super(PeonyBlockEntities.TOM_PLUSHIE.get(), pos, state);
@@ -36,7 +31,6 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
 
     public void startSquish(long gameTime) {
         squishStartTick = gameTime;
-
         setChanged();
 
         if (level != null) {
@@ -57,6 +51,33 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
         return Mth.sin((elapsed / ANIMATION_TICKS) * Mth.PI);
     }
 
+    public boolean isMuted() {
+        return muted;
+    }
+
+    public void setMuted(boolean muted) {
+        if (this.muted == muted) {
+            return;
+        }
+
+        this.muted = muted;
+        setChanged();
+
+        if (level != null) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
+    }
+
+    public boolean updateSignal(int signal) {
+        if (signal == lastSignal) {
+            return false;
+        }
+
+        lastSignal = signal;
+        setChanged();
+        return true;
+    }
+
     @Override
     public Packet<ClientGamePacketListener> getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
@@ -73,11 +94,15 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         tag.putLong(START_TICK, squishStartTick);
+        tag.putBoolean(MUTED, muted);
+        tag.putInt(LAST_SIGNAL, lastSignal);
     }
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
         squishStartTick = tag.contains(START_TICK) ? tag.getLong(START_TICK) : -1L;
+        muted = tag.getBoolean(MUTED);
+        lastSignal = tag.getInt(LAST_SIGNAL);
     }
 }

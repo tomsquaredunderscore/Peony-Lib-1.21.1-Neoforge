@@ -16,6 +16,7 @@ import net.tomsquared.peony_lib.items.custom.PeonyPlushies;
 
 @EventBusSubscriber(modid = Peony_Lib.MOD_ID)
 public final class PeonyPlushieCombatEvents {
+    private static final int MAX_CHARGE_TICKS = 100;
     private static final Map<Player, Long> CHARGE_START_TICKS = new WeakHashMap<>();
 
     private PeonyPlushieCombatEvents() {
@@ -37,41 +38,43 @@ public final class PeonyPlushieCombatEvents {
     @SubscribeEvent
     public static void onAttack(AttackEntityEvent event) {
         Player player = event.getEntity();
-        ItemStack stack = player.getMainHandItem();
 
+        if (player.level().isClientSide) {
+            return;
+        }
+
+        ItemStack stack = player.getMainHandItem();
         if (!(stack.getItem() instanceof PeonyPlushies) || !(event.getTarget() instanceof LivingEntity target)) {
             return;
         }
 
+        float charge = getChargeProgress(player);
+
         event.setCanceled(true);
-
-        float knockback = getKnockbackStrength(player);
-        applyKnockback(player, target, knockback);
-
+        applyKnockback(player, target, charge);
         CHARGE_START_TICKS.remove(player);
     }
 
-    private static float getKnockbackStrength(Player player) {
-        float baseKnockback = 0.4F;
-
-        if (!player.isCrouching()) {
-            return baseKnockback;
+    public static float getChargeProgress(Player player) {
+        if (player == null || !player.isCrouching()) {
+            return 0.0F;
         }
 
         Long startTick = CHARGE_START_TICKS.get(player);
         if (startTick == null) {
-            return baseKnockback;
+            return 0.0F;
         }
 
-        float chargedSeconds = (player.level().getGameTime() - startTick) / 20.0F;
-        float charge = Mth.clamp(chargedSeconds / 5.0F, 0.0F, 1.0F);
-
-        return baseKnockback * (1.0F + (4.0F * charge));
+        float chargedTicks = player.level().getGameTime() - startTick.longValue();
+        return Mth.clamp(chargedTicks / (float) MAX_CHARGE_TICKS, 0.0F, 1.0F);
     }
 
-    private static void applyKnockback(Player player, LivingEntity target, float strength) {
+    private static void applyKnockback(Player player, LivingEntity target, float charge) {
+        float strength = 0.45F + (3.55F * charge);
         double dx = player.getX() - target.getX();
         double dz = player.getZ() - target.getZ();
+
         target.knockback(strength, dx, dz);
+        target.setDeltaMovement(target.getDeltaMovement().add(0.0D, 0.08D + (0.12D * charge), 0.0D));
     }
 }
