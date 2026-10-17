@@ -22,6 +22,7 @@ import net.tomsquared.peony_lib.items.PeonyItems;
 import net.tomsquared.peony_lib.sound.PeonySounds;
 
 
+
 @Mod(Peony_Lib.MOD_ID)
 public class Peony_Lib {
     public static final String MOD_ID = "peony_lib";
@@ -37,8 +38,10 @@ public class Peony_Lib {
         PeonyBlocks.register(modEventBus);
         PeonyBlockEntities.register(modEventBus);
         PeonyItems.register(modEventBus);
-        
 
+        NeoForge.EVENT_BUS.addListener(
+                BetaNotificationHandler::onPlayerLogin
+        );
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -70,6 +73,8 @@ public class Peony_Lib {
 
         }
     }
+
+
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
