@@ -142,16 +142,6 @@ public class PeonyBlocks {
                     PeonySounds.PLACEHOLDER_2.get()
 
             ));
-    public static final DeferredHolder<Block, PeonyPlushyBlock> JAMPOTTBONG_PLUSHIE = BLOCKS.register("jampottbong_plushie",
-            () -> new PeonyPlushyBlock(
-                    BlockBehaviour.Properties.of()
-                            .sound(SoundType.WOOL)
-                            .strength(0.8F)
-                            .destroyTime(0.2f)
-                            .noOcclusion(),
-                    PeonySounds.PLACEHOLDER_2.get()
-
-            ));
     public static final DeferredHolder<Block, PeonyPlushyBlock> SHALAMBIAN_PLUSHIE = BLOCKS.register("shalambian_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()

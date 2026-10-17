@@ -66,7 +66,6 @@ public class Peony_Lib {
             event.accept(PeonyItems.TIE_PLUSHIE.get());
             event.accept(PeonyItems.POTATOWOLFIE_PLUSHIE.get());
             event.accept(PeonyItems.EPICCOOL_PLUSHIE.get());
-            event.accept(PeonyItems.JAMPOTTBONG_PLUSHIE.get());
             event.accept(PeonyItems.FULL_PIZZA.get());
             event.accept(PeonyItems.PIZZA_SLICE.get());
             event.accept(PeonyItems.CUBE.get());

@@ -78,13 +78,6 @@ public class PeonyItems {
 
                 PeonySounds.PLACEHOLDER_2.get()
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> JAMPOTTBONG_PLUSHIE = ITEMS.register("jampottbong_plushie",
-        () -> new PeonyPlushies(
-                PeonyBlocks.JAMPOTTBONG_PLUSHIE.get(),
-                new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
-                PeonySounds.PLACEHOLDER_2.get()
-        ));
     public static final DeferredHolder<Item, PeonyPlushies> KANINSCHENSPEED_PLUSHIE = ITEMS.register("kaninschenspeed_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
