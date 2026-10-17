@@ -25,6 +25,8 @@ public class PeonyBlockEntities {
                             PeonyBlocks.JACK_PLUSHIE.get(),
                             PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
                             PeonyBlocks.SHALAMBIAN_PLUSHIE.get(),
+                            PeonyBlocks.EPICCOOL_PLUSHIE.get(),
+                            PeonyBlocks.JAMPOTTBONG_PLUSHIE.get(),
                             PeonyBlocks.CUBE.get()
                     ).build(null));
 

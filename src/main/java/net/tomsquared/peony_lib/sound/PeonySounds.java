@@ -24,21 +24,34 @@ public class PeonySounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_9 = register("tom_plushie_voice_lines_9");
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_10 = register("tom_plushie_voice_lines_10");
     public static final DeferredHolder<SoundEvent, SoundEvent> RYAN_PLUSHIE_VOICE_LINES_1 = register("ryan_plushie_voice_lines_1");
-  public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_1 = register("placeholder_1");
-  public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_2 = register("placeholder_2");
-  public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_1 = register("tie_voice_line_1");
-  public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_2 = register("tie_voice_line_2");
-  public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_3 = register("tie_voice_line_3");
-  public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_4 = register("tie_voice_line_4");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_1 = register("shendi_plushie_voice_lines_1");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_2 = register("shendi_plushie_voice_lines_2");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_3 = register("shendi_plushie_voice_lines_3");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_4 = register("shendi_plushie_voice_lines_4");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_5 = register("shendi_plushie_voice_lines_5");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_6 = register("shendi_plushie_voice_lines_6");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_7 = register("shendi_plushie_voice_lines_7");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_8 = register("shendi_plushie_voice_lines_8");
-  public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_9 = register("shendi_plushie_voice_lines_9");
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_1 = register("placeholder_1");
+    public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_2 = register("placeholder_2");
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_1 = register("tie_voice_line_1");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_2 = register("tie_voice_line_2");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_3 = register("tie_voice_line_3");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TIE_VOICE_LINE_4 = register("tie_voice_line_4");
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_1 = register("shendi_plushie_voice_lines_1");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_2 = register("shendi_plushie_voice_lines_2");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_3 = register("shendi_plushie_voice_lines_3");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_4 = register("shendi_plushie_voice_lines_4");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_5 = register("shendi_plushie_voice_lines_5");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_6 = register("shendi_plushie_voice_lines_6");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_7 = register("shendi_plushie_voice_lines_7");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_8 = register("shendi_plushie_voice_lines_8");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHENDI_PLUSHIE_VOICE_LINE_9 = register("shendi_plushie_voice_lines_9");
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_1 = register("jack_voice_lines_1");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_2 = register("jack_voice_lines_2");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_3 = register("jack_voice_lines_3");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_4 = register("jack_voice_lines_4");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_5 = register("jack_voice_lines_5");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_6 = register("jack_voice_lines_6");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_7 = register("jack_voice_lines_7");
+    public static final DeferredHolder<SoundEvent, SoundEvent> JACK_VOICE_LINE_8 = register("jack_voice_lines_8");
+
 
     private static DeferredHolder<SoundEvent, SoundEvent> register(String name) {
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Peony_Lib.MOD_ID, name);

@@ -151,6 +151,69 @@
       }
     ]
   },
+  "jack_voice_lines_1": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_1",
+        "stream": false
+      }
+    ]
+  },
+  "jack_voice_lines_2": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_2",
+        "stream": false
+      }
+    ]
+  },
+  "jack_voice_lines_3": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_3",
+        "stream": false
+      }
+    ]
+  },
+  "jack_voice_lines_4": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_4",
+        "stream": false
+      }
+    ]
+  },
+  "jack_voice_lines_5": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_5",
+        "stream": false
+      }
+    ]
+  },
+  "jack_voice_lines_6": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_6",
+        "stream": false
+      }
+    ]
+  },
+  "jack_voice_lines_7": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_7",
+        "stream": false
+      }
+    ]  },
+  "jack_voice_lines_8": {
+    "sounds": [
+      {
+        "name": "peony_lib:jack_voice_lines_8",
+        "stream": false
+      }
+    ]
+  },
   "shendi_plushie_voice_lines_4": {
     "sounds": [
       {

@@ -14,32 +14,38 @@ public class PeonyItemTooltips {
     public static void onItemTooltip(ItemTooltipEvent event) {
         var stack = event.getItemStack();
 
-        if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.TOM_PLUSHIE.get())) {
+        if (stack.is(PeonyItems.TOM_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.tom_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.SHENDI_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.SHENDI_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.shendi_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.RYAN_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.RYAN_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.ryan_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.OVA_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.OVA_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.ova_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.JACK_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.JACK_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.jack_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.KANINSCHENSPEED_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.KANINSCHENSPEED_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.kaninschenspeed_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.SHALAMBIAN_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.SHALAMBIAN_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.shalambian_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.POTATOWOLFIE_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.POTATOWOLFIE_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.potatowolfie_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        } else if (stack.is(net.tomsquared.peony_lib.items.PeonyItems.TIE_PLUSHIE.get())) {
+        } else if (stack.is(PeonyItems.TIE_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.tie_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
+        }else if (stack.is(PeonyItems.EPICCOOL_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.epiccool_plushie.desc")
+                    .withStyle(ChatFormatting.GRAY));
+        }else if (stack.is(PeonyItems.JAMPOTTBONG_PLUSHIE.get())) {
+            event.getToolTip().add(Component.translatable("item.peony_lib.jampottbong_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
         }
           if (stack.getItem() instanceof PeonyPlushies && PeonyPlushies.isMuted(stack)) {

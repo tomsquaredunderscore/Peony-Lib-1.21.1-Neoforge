@@ -77,7 +77,14 @@ public class PeonyBlocks {
                             .destroyTime(0.2f)
                             .noOcclusion(),
 
-                    PeonySounds.PLACEHOLDER_2.get()
+                    PeonySounds.JACK_VOICE_LINE_1.get(),
+                    PeonySounds.JACK_VOICE_LINE_2.get(),
+                    PeonySounds.JACK_VOICE_LINE_3.get(),
+                    PeonySounds.JACK_VOICE_LINE_4.get(),
+                    PeonySounds.JACK_VOICE_LINE_5.get(),
+                    PeonySounds.JACK_VOICE_LINE_6.get(),
+                    PeonySounds.JACK_VOICE_LINE_7.get(),
+                    PeonySounds.JACK_VOICE_LINE_8.get()
             ));
 
     public static final DeferredHolder<Block, PeonyPlushyBlock> RYAN_PLUSHIE = BLOCKS.register("ryan_plushie",
@@ -97,7 +104,7 @@ public class PeonyBlocks {
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
-                    PeonySounds.RYAN_PLUSHIE_VOICE_LINES_1.get()
+                    PeonySounds.PLACEHOLDER_2.get()
 
             ));
     public static final DeferredHolder<Block, PeonyPlushyBlock> TIE_PLUSHIE = BLOCKS.register("tie_plushie",
@@ -123,6 +130,26 @@ public class PeonyBlocks {
                             .noOcclusion(),
                     PeonySounds.PLACEHOLDER_2.get(),
                     PeonySounds.PLACEHOLDER_1.get()
+
+            ));
+    public static final DeferredHolder<Block, PeonyPlushyBlock> EPICCOOL_PLUSHIE = BLOCKS.register("epiccool_plushie",
+            () -> new PeonyPlushyBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.WOOL)
+                            .strength(0.8F)
+                            .destroyTime(0.2f)
+                            .noOcclusion(),
+                    PeonySounds.PLACEHOLDER_2.get()
+
+            ));
+    public static final DeferredHolder<Block, PeonyPlushyBlock> JAMPOTTBONG_PLUSHIE = BLOCKS.register("jampottbong_plushie",
+            () -> new PeonyPlushyBlock(
+                    BlockBehaviour.Properties.of()
+                            .sound(SoundType.WOOL)
+                            .strength(0.8F)
+                            .destroyTime(0.2f)
+                            .noOcclusion(),
+                    PeonySounds.PLACEHOLDER_2.get()
 
             ));
     public static final DeferredHolder<Block, PeonyPlushyBlock> SHALAMBIAN_PLUSHIE = BLOCKS.register("shalambian_plushie",
