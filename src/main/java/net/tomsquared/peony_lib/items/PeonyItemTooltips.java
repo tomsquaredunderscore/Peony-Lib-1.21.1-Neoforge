@@ -44,9 +44,6 @@ public class PeonyItemTooltips {
         }else if (stack.is(PeonyItems.EPICCOOL_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.epiccool_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));
-        }else if (stack.is(PeonyItems.JAMPOTTBONG_PLUSHIE.get())) {
-            event.getToolTip().add(Component.translatable("item.peony_lib.jampottbong_plushie.desc")
-                    .withStyle(ChatFormatting.GRAY));
         }
           if (stack.getItem() instanceof PeonyPlushies && PeonyPlushies.isMuted(stack)) {
             event.getToolTip().add(Component.translatable("item.peony_lib.plushie.muted")
