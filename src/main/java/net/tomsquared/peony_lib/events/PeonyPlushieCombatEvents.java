@@ -3,6 +3,8 @@ package net.tomsquared.peony_lib.events;
 import java.util.Map;
 import java.util.WeakHashMap;
 
+import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -76,5 +78,9 @@ public final class PeonyPlushieCombatEvents {
 
         target.knockback(strength, dx, dz);
         target.setDeltaMovement(target.getDeltaMovement().add(0.0D, 0.08D + (0.12D * charge), 0.0D));
+
+        if (target instanceof ServerPlayer pushed) {
+            pushed.connection.send(new ClientboundSetEntityMotionPacket(pushed));
+        }
     }
 }

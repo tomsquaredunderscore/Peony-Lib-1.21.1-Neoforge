@@ -12,6 +12,7 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
 import net.tomsquared.peony_lib.client.PeonyPlushyBlockEntityRenderer;
+import net.tomsquared.peony_lib.client.PeonyPlushyChargeOverlay;
 
 @Mod(value = Peony_Lib.MOD_ID, dist = Dist.CLIENT)
 public class Peony_LibClient {
@@ -28,4 +29,5 @@ public class Peony_LibClient {
     private void registerGuiLayers(RegisterGuiLayersEvent event) {
         event.registerAbove(VanillaGuiLayers.CROSSHAIR, PeonyPlushyChargeOverlay.ID, PeonyPlushyChargeOverlay::render);
     }
+
 }

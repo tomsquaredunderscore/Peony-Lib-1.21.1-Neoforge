@@ -6,6 +6,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.tomsquared.peony_lib.Peony_Lib;
 import net.tomsquared.peony_lib.client.PeonyPlushySoundClient;
+import net.tomsquared.peony_lib.client.PeonyClientGameRules;
 
 @EventBusSubscriber(modid = Peony_Lib.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public final class PeonyNetwork {
@@ -14,8 +15,9 @@ public final class PeonyNetwork {
 
     @SubscribeEvent
     public static void register(RegisterPayloadHandlersEvent event) {
-        // lambda keeps the client class from loading on dedicated servers
         event.registrar("1").playToClient(PlushySoundPayload.TYPE, PlushySoundPayload.STREAM_CODEC,
                 (payload, context) -> context.enqueueWork(() -> PeonyPlushySoundClient.play(payload)));
+        event.registrar("1").playToClient(PeonyGameRulesPayload.TYPE, PeonyGameRulesPayload.STREAM_CODEC,
+                (payload, context) -> context.enqueueWork(() -> PeonyClientGameRules.apply(payload)));
     }
 }

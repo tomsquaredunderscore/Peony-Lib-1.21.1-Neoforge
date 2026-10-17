@@ -52,6 +52,12 @@ neoForge {
 
             programArguments.addAll '--username', 'OvaAlpha3'
         }
+        client3 {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+
+            programArguments.addAll '--username', 'DerShendi'
+        }
 
         server {
             server()

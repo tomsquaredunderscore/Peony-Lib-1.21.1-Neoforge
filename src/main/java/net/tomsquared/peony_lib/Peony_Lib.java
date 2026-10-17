@@ -20,6 +20,8 @@ import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
 import net.tomsquared.peony_lib.blocks.PeonyBlocks;
 import net.tomsquared.peony_lib.items.PeonyItems;
 import net.tomsquared.peony_lib.sound.PeonySounds;
+import net.tomsquared.peony_lib.utils.PeonyGameRules;
+
 
 
 
@@ -51,7 +53,8 @@ public class Peony_Lib {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        
+        event.enqueueWork(PeonyGameRules::register);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
