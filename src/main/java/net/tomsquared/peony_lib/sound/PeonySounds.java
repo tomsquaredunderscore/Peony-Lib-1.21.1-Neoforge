@@ -12,8 +12,9 @@ public class PeonySounds {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(Registries.SOUND_EVENT, Peony_Lib.MOD_ID);
 
-    public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_1 = register("tom_plushie_voice_lines_1");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SQUEAK = register("squeak");        
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_1 = register("tom_plushie_voice_lines_1");
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_2 = register("tom_plushie_voice_lines_2");
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_3 = register("tom_plushie_voice_lines_3");
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_4 = register("tom_plushie_voice_lines_4");
@@ -23,6 +24,7 @@ public class PeonySounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_8 = register("tom_plushie_voice_lines_8");
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_9 = register("tom_plushie_voice_lines_9");
     public static final DeferredHolder<SoundEvent, SoundEvent> TOM_PLUSHIE_VOICE_LINES_10 = register("tom_plushie_voice_lines_10");
+    
     public static final DeferredHolder<SoundEvent, SoundEvent> RYAN_PLUSHIE_VOICE_LINES_1 = register("ryan_plushie_voice_lines_1");
 
     public static final DeferredHolder<SoundEvent, SoundEvent> PLACEHOLDER_1 = register("placeholder_1");

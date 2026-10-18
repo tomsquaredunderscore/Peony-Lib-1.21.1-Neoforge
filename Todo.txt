@@ -1,0 +1,149 @@
+Plushies 
+    - Block Integration (1/1) ✓
+        Placeable and interactable ✓
+    - Animation (1/1) ✓
+        When rightclicked it squishes ✓
+    - Sound Integration (1/1) ✓
+        Just Yes ✓
+    - Item/Block Interaction (10/10) ✓ for now maybe new Integrations later
+        Play sound when rightclicked ✓
+        Place only when shift rightclicked ✓
+        When left click then knockback entity with no damage ✓
+        When shift left click then the attack charges up and does up to 5x knockback ✓
+        Shearing the plushy to mute it(also gived the item to the player) ✓
+        Rightclicking with Noteblocks to unmute the plushy ✓
+        Rightclicking with slime to make the plushy squeaky ✓
+        Chargeup attack indicator which shows how much the attack got charged ✓
+        Disable sound when another sound is playing from the same source ✓
+        When picking up the Plushy it keeps the specific tag (Normal, Muted and Squeaky) ✓
+
+
+    - Redstone Interaction (2/2) ✓
+        Activated via Redstone ✓
+        Signal strength determines which sound plays ✓
+
+    - Sculk Interaction (2/2) ✓
+        Activates the sculk sensor ✓
+        Muted doesnt interact ✓
+        Calibrated sculk level 
+
+
+- Beta Notifications ✓
+    Tom did that for when some mods are detected ✓
+
+- Gamerules/Commands/Configs (4/6)
+    showplayernametags ✓
+    showplayertablist ✓
+    showplayerjoining (joining and leaving in one command) ✓
+    panorama command (/peony panorama) ✓
+    Beta Notification disabler
+    TTS settings (when TTS is integrated)
+    Max Attribute admin command (when Attributes are integrated)
+    Disable Plushies Config
+    Vanish
+    TPS 
+
+
+
+- Patchouli like Book
+    Genuinely just steal how Patchouli handles shit and try to work with it
+    Json file books
+    NBT Data
+    Recipe Handler
+    Structure integration (book and hologram in the world)
+
+- Attributes Limiter (This is a limiter for every attribute ingame like Walking speed, attack damage, attack speed, reach etc.)
+    Custom Menu
+    Automatic attributes list
+    Attribute pinning button to pin specific Attributes at the top of the list
+    Attributes max number thing
+    Curio like button somewhere in the inventory
+
+
+
+- Colorized Hearts in case theres more health posibilities lateron
+
+    
+
+- Beacon like block funtion:
+    Area of effect beacon thingy
+    Positive effects need to be counteracted with negative effects as a sort of ying and yang bs
+    Negative effects dont need counteraction
+    Range extenders and minimizers
+
+    Beacon block effects
+        Basic potion effects
+        Increased Spawn rates(Stackable)
+        Increased Mob difficulty(Stackable)
+        Boss monster Spawn posibility(Those base mobs that can do funky stuff like apoth bosses or champions or whatever its called)
+        Can have the effect of not spawning Mobs at all(Hostile, Neutral or friendly)(exclusive with the Increased and Boss spawning ones)
+
+
+
+
+- Tomodachi like TTS Integration:
+    Tomodachi Like sliders for the voice options
+    Simple Voice chat integration
+
+
+
+- Target Dummy
+    Can wear whatever
+    Shows you how much damage you did regularly and over time
+    Has a menu to show you aswell not just the floating numbers and the text on top of your hud like hmmmm
+    The menu will have a detailed list/ divide the Damage types and tell you how much you did with each damage type
+    Can wear artifacts/Curio Items
+
+
+
+- Procedual Dungeon Generation:
+
+
+- Posession:
+
+
+- Specialized Item description
+
+
+
+- Transmog like item smithing
+
+
+
+
+- Vanilla Block Interaction Overhaul
+    Reverse Scaffholding Leaves
+
+
+- Weapon and Tool class registrations:
+    Double Function Item Registration 
+    Straight up steal my old code from Goober
+        Hammers and all the Specialized tools
+        Backporting the Minecraft Spears 
+
+
+
+- Weapon/Tool "Runification"/Attribute "Installing"
+
+
+
+- Texture stacking for Items that require multiple textures to be on top of each other
+    Needs to be able to let a dev choose in which order the textures can be stacked
+    Needs to let us select if a layer is colored or monochrome which will then be able to be colored in the code
+    Needs to be dynamic in a way that could just be changed with ingame actions.(Like choosing a tool part or dyeing the item)
+    Ingame block entity which lets a player switch the order of the layers aswell (dev but also with the smithing mod I need a block that would do that)
+    Layer Visibility Needs to be toggleable
+    The ability to change the texture of normal items into multi texture items(the transmog thing would be the best thing prop)
+
+
+
+- Draconic Evolution like Damage bypasser(the extra shield thing)
+
+
+
+- AFK cinematics
+
+
+
+
+

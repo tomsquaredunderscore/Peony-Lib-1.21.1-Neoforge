@@ -15,10 +15,12 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
     private static final int ANIMATION_TICKS = 10;
     private static final String START_TICK = "squishStartTick";
     private static final String MUTED = "muted";
+    private static final String SQUEAKY = "squeaky";
     private static final String LAST_SIGNAL = "lastSignal";
 
     private long squishStartTick = -1L;
     private boolean muted;
+    private boolean squeaky;
     private int lastSignal;
 
     public PeonyPlushyBlockEntity(BlockPos pos, BlockState state) {
@@ -31,11 +33,7 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
 
     public void startSquish(long gameTime) {
         squishStartTick = gameTime;
-        setChanged();
-
-        if (level != null) {
-            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
-        }
+        sync();
     }
 
     public float getSquishProgress(float partialTick) {
@@ -56,15 +54,20 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
     }
 
     public void setMuted(boolean muted) {
-        if (this.muted == muted) {
-            return;
+        if (this.muted != muted) {
+            this.muted = muted;
+            sync();
         }
+    }
 
-        this.muted = muted;
-        setChanged();
+    public boolean isSqueaky() {
+        return squeaky;
+    }
 
-        if (level != null) {
-            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+    public void setSqueaky(boolean squeaky) {
+        if (this.squeaky != squeaky) {
+            this.squeaky = squeaky;
+            sync();
         }
     }
 
@@ -76,6 +79,14 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
         lastSignal = signal;
         setChanged();
         return true;
+    }
+
+    private void sync() {
+        setChanged();
+
+        if (level != null) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        }
     }
 
     @Override
@@ -95,6 +106,7 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
         super.saveAdditional(tag, registries);
         tag.putLong(START_TICK, squishStartTick);
         tag.putBoolean(MUTED, muted);
+        tag.putBoolean(SQUEAKY, squeaky);
         tag.putInt(LAST_SIGNAL, lastSignal);
     }
 
@@ -103,6 +115,7 @@ public class PeonyPlushyBlockEntity extends BlockEntity {
         super.loadAdditional(tag, registries);
         squishStartTick = tag.contains(START_TICK) ? tag.getLong(START_TICK) : -1L;
         muted = tag.getBoolean(MUTED);
+        squeaky = tag.getBoolean(SQUEAKY);
         lastSignal = tag.getInt(LAST_SIGNAL);
     }
 }

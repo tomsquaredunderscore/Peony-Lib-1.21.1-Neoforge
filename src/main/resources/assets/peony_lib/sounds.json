@@ -1,4 +1,12 @@
 {
+  "squeak": {
+    "sounds": [
+      {
+        "name": "peony_lib:squeak",
+        "stream": false
+      }
+    ]
+  },
   "tom_plushie_voice_lines_1": {
     "sounds": [
       {
