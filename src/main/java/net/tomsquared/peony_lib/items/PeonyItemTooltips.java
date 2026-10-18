@@ -14,6 +14,10 @@ public class PeonyItemTooltips {
     public static void onItemTooltip(ItemTooltipEvent event) {
         var stack = event.getItemStack();
 
+        if (!(stack.getItem() instanceof PeonyPlushies)) {
+            return;
+        }
+
         if (stack.is(PeonyItems.TOM_PLUSHIE.get())) {
             event.getToolTip().add(Component.translatable("item.peony_lib.tom_plushie.desc")
                     .withStyle(ChatFormatting.GRAY));

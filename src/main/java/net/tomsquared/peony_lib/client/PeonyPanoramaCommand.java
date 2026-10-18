@@ -87,7 +87,7 @@ public final class PeonyPanoramaCommand {
             window.setHeight(size);
 
             for (int face = 0; face < 6; face++) {
-                // same face order the title screen cubemap expects
+                
                 float faceYaw = switch (face) {
                     case 1 -> yaw + 90.0F;
                     case 2 -> yaw + 180.0F;

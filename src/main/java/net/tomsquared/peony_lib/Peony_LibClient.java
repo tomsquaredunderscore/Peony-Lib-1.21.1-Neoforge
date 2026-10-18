@@ -13,6 +13,7 @@ import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
 import net.tomsquared.peony_lib.client.PeonyPlushyBlockEntityRenderer;
 import net.tomsquared.peony_lib.client.PeonyPlushyChargeOverlay;
+import net.tomsquared.peony_lib.Config;
 
 @Mod(value = Peony_Lib.MOD_ID, dist = Dist.CLIENT)
 public class Peony_LibClient {
@@ -23,7 +24,9 @@ public class Peony_LibClient {
     }
 
     private void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(PeonyBlockEntities.TOM_PLUSHIE.get(), PeonyPlushyBlockEntityRenderer::new);
+        if (Config.plushiesExist()) {
+            event.registerBlockEntityRenderer(PeonyBlockEntities.TOM_PLUSHIE.get(), PeonyPlushyBlockEntityRenderer::new);
+        }
     }
 
     private void registerGuiLayers(RegisterGuiLayersEvent event) {

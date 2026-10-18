@@ -7,13 +7,17 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tomsquared.peony_lib.Peony_Lib;
 import net.tomsquared.peony_lib.blocks.custom.PeonyPlushyBlockEntity;
+import net.tomsquared.peony_lib.Config;
 
 public class PeonyBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, Peony_Lib.MOD_ID);
 
+    public static final DeferredRegister<BlockEntityType<?>> PLUSHIES =
+            DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, Peony_Lib.MOD_ID);
+
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PeonyPlushyBlockEntity>> TOM_PLUSHIE =
-            BLOCK_ENTITIES.register("tom_plushie",
+            PLUSHIES.register("tom_plushie",
                     () -> BlockEntityType.Builder.of(
                             PeonyPlushyBlockEntity::new,
                             PeonyBlocks.TOM_PLUSHIE.get(),
@@ -25,11 +29,14 @@ public class PeonyBlockEntities {
                             PeonyBlocks.JACK_PLUSHIE.get(),
                             PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
                             PeonyBlocks.SHALAMBIAN_PLUSHIE.get(),
-                            PeonyBlocks.EPICCOOL_PLUSHIE.get(),
-                            PeonyBlocks.CUBE.get()
+                            PeonyBlocks.EPICCOOL_PLUSHIE.get()
                     ).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
+
+        if (Config.plushiesExist()) {
+            PLUSHIES.register(eventBus);
+        }
     }
 }

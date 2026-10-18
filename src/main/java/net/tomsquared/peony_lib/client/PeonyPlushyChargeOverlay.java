@@ -37,7 +37,6 @@ public final class PeonyPlushyChargeOverlay {
         int y = guiGraphics.guiHeight() / 2 - 7 + 16;
 
         RenderSystem.enableBlend();
-        // same inverted blend vanilla uses for the crosshair
         RenderSystem.blendFuncSeparate(
                 GlStateManager.SourceFactor.ONE_MINUS_DST_COLOR,
                 GlStateManager.DestFactor.ONE_MINUS_SRC_COLOR,

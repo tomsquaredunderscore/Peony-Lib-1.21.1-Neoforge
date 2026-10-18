@@ -18,7 +18,7 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.gameevent.GameEvent;
+import net.tomsquared.peony_lib.sound.PeonySoundEvents;
 import net.tomsquared.peony_lib.network.PlushySoundPayload;
 import net.tomsquared.peony_lib.sound.PeonySounds;
 
@@ -104,7 +104,7 @@ public class PeonyPlushies extends BlockItem {
         SoundEvent sound = pickSound(stack, player);
         if (sound != null) {
             PlushySoundPayload.playOnEntity(serverLevel, player, sound, BuiltInRegistries.ITEM.getKey(this));
-            level.gameEvent(player, GameEvent.ITEM_INTERACT_FINISH, player.position());
+                level.gameEvent(player, PeonySoundEvents.PLUSHY_SOUND, player.position());
         }
 
         player.getCooldowns().addCooldown(this, SOUND_COOLDOWN_TICKS);

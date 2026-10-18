@@ -41,6 +41,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.tomsquared.peony_lib.items.custom.PeonyPlushies;
 import net.tomsquared.peony_lib.network.PlushySoundPayload;
 import net.tomsquared.peony_lib.sound.PeonySounds;
+import net.tomsquared.peony_lib.sound.PeonySoundEvents;
 
 public class PeonyPlushyBlock extends HorizontalDirectionalBlock implements EntityBlock {
     public static final MapCodec<PeonyPlushyBlock> CODEC = simpleCodec(PeonyPlushyBlock::new);
@@ -89,7 +90,7 @@ public class PeonyPlushyBlock extends HorizontalDirectionalBlock implements Enti
 
             int index = sounds.isEmpty() ? 0 : level.getRandom().nextInt(sounds.size());
                         if (playSound(serverLevel, pos, plushy, index)) {
-                level.gameEvent(player, GameEvent.BLOCK_ACTIVATE, pos);
+                level.gameEvent(player, PeonySoundEvents.PLUSHY_SOUND, pos);
             }
         }
 
@@ -153,7 +154,7 @@ public class PeonyPlushyBlock extends HorizontalDirectionalBlock implements Enti
 
         plushy.startSquish(level.getGameTime());
                 if (playSound(level, pos, plushy, 15 - signal)) {
-            level.gameEvent(GameEvent.BLOCK_ACTIVATE, pos, GameEvent.Context.of(state));
+            level.gameEvent(PeonySoundEvents.PLUSHY_SOUND, pos, GameEvent.Context.of(state));
         }
     }
 

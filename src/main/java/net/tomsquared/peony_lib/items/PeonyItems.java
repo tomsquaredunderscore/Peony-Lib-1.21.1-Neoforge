@@ -13,12 +13,16 @@ import net.tomsquared.peony_lib.blocks.PeonyBlocks;
 import net.tomsquared.peony_lib.items.custom.PeonyFoodBlockItem;
 import net.tomsquared.peony_lib.items.custom.PeonyPlushies;
 import net.tomsquared.peony_lib.sound.PeonySounds;
+import net.tomsquared.peony_lib.Config;
 
 public class PeonyItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(Registries.ITEM, Peony_Lib.MOD_ID);
 
-    public static final DeferredHolder<Item, PeonyPlushies> TOM_PLUSHIE = ITEMS.register("tom_plushie",
+    public static final DeferredRegister<Item> PLUSHIES =
+            DeferredRegister.create(Registries.ITEM, Peony_Lib.MOD_ID);
+
+    public static final DeferredHolder<Item, PeonyPlushies> TOM_PLUSHIE = PLUSHIES.register("tom_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.TOM_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
@@ -32,13 +36,12 @@ public class PeonyItems {
                 PeonySounds.TOM_PLUSHIE_VOICE_LINES_8.get(),
                 PeonySounds.TOM_PLUSHIE_VOICE_LINES_9.get(),
                 PeonySounds.TOM_PLUSHIE_VOICE_LINES_10.get()
-
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> SHENDI_PLUSHIE = ITEMS.register("shendi_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> SHENDI_PLUSHIE = PLUSHIES.register("shendi_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.SHENDI_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
                 PeonySounds.SHENDI_PLUSHIE_VOICE_LINE_1.get(),
                 PeonySounds.SHENDI_PLUSHIE_VOICE_LINE_2.get(),
                 PeonySounds.SHENDI_PLUSHIE_VOICE_LINE_3.get(),
@@ -49,18 +52,18 @@ public class PeonyItems {
                 PeonySounds.SHENDI_PLUSHIE_VOICE_LINE_8.get(),
                 PeonySounds.SHENDI_PLUSHIE_VOICE_LINE_9.get()
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> OVA_PLUSHIE = ITEMS.register("ova_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> OVA_PLUSHIE = PLUSHIES.register("ova_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.OVA_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
                 PeonySounds.PLACEHOLDER_2.get()
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> JACK_PLUSHIE = ITEMS.register("jack_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> JACK_PLUSHIE = PLUSHIES.register("jack_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.JACK_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
                 PeonySounds.JACK_VOICE_LINE_1.get(),
                 PeonySounds.JACK_VOICE_LINE_2.get(),
                 PeonySounds.JACK_VOICE_LINE_3.get(),
@@ -70,46 +73,45 @@ public class PeonyItems {
                 PeonySounds.JACK_VOICE_LINE_7.get(),
                 PeonySounds.JACK_VOICE_LINE_8.get()
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> EPICCOOL_PLUSHIE = ITEMS.register("epiccool_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> EPICCOOL_PLUSHIE = PLUSHIES.register("epiccool_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.EPICCOOL_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
                 PeonySounds.PLACEHOLDER_2.get()
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> KANINSCHENSPEED_PLUSHIE = ITEMS.register("kaninschenspeed_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> KANINSCHENSPEED_PLUSHIE = PLUSHIES.register("kaninschenspeed_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.KANINSCHENSPEED_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
                 PeonySounds.PLACEHOLDER_2.get(),
                 PeonySounds.PLACEHOLDER_1.get()
-
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> SHALAMBIAN_PLUSHIE = ITEMS.register("shalambian_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> SHALAMBIAN_PLUSHIE = PLUSHIES.register("shalambian_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.SHALAMBIAN_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
-
                 PeonySounds.PLACEHOLDER_2.get(),
                 PeonySounds.PLACEHOLDER_1.get()
-
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> RYAN_PLUSHIE = ITEMS.register("ryan_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> RYAN_PLUSHIE = PLUSHIES.register("ryan_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.RYAN_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
                 PeonySounds.RYAN_PLUSHIE_VOICE_LINES_1.get()
-
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> POTATOWOLFIE_PLUSHIE = ITEMS.register("potatowolfie_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> POTATOWOLFIE_PLUSHIE = PLUSHIES.register("potatowolfie_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.POTATOWOLFIE_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
                 PeonySounds.RYAN_PLUSHIE_VOICE_LINES_1.get()
-
         ));
-    public static final DeferredHolder<Item, PeonyPlushies> TIE_PLUSHIE = ITEMS.register("tie_plushie",
+
+    public static final DeferredHolder<Item, PeonyPlushies> TIE_PLUSHIE = PLUSHIES.register("tie_plushie",
         () -> new PeonyPlushies(
                 PeonyBlocks.TIE_PLUSHIE.get(),
                 new Item.Properties().rarity(Rarity.EPIC).stacksTo(1),
@@ -117,7 +119,6 @@ public class PeonyItems {
                 PeonySounds.TIE_VOICE_LINE_2.get(),
                 PeonySounds.TIE_VOICE_LINE_3.get(),
                 PeonySounds.TIE_VOICE_LINE_4.get()
-
         ));
 
     public static final DeferredHolder<Item, PeonyFoodBlockItem> CUBE =
@@ -147,5 +148,9 @@ public class PeonyItems {
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
+
+        if (Config.plushiesExist()) {
+            PLUSHIES.register(eventBus);
+        }
     }
 }

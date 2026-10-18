@@ -22,10 +22,11 @@ Plushies
         Activated via Redstone ✓
         Signal strength determines which sound plays ✓
 
-    - Sculk Interaction (2/2) ✓
+    - Sculk Interaction (4/4) ✓
         Activates the sculk sensor ✓
         Muted doesnt interact ✓
-        Calibrated sculk level 
+        Calibrated sculk level ✓
+        Warden has a friend ✓
 
 
 - Beta Notifications ✓
@@ -39,7 +40,7 @@ Plushies
     Beta Notification disabler
     TTS settings (when TTS is integrated)
     Max Attribute admin command (when Attributes are integrated)
-    Disable Plushies Config
+    Disable Plushies Config ✓
     Vanish
     TPS 
 
@@ -107,6 +108,8 @@ Plushies
 
 
 - Transmog like item smithing
+    Transmog Smithing Template
+    Transmog Function in general
 
 
 
@@ -116,7 +119,7 @@ Plushies
 
 
 - Weapon and Tool class registrations:
-    Double Function Item Registration 
+    Double Function Item Registration ✓
     Straight up steal my old code from Goober
         Hammers and all the Specialized tools
         Backporting the Minecraft Spears 

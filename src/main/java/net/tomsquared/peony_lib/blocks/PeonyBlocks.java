@@ -14,12 +14,16 @@ import net.tomsquared.peony_lib.blocks.custom.PeonyFoodBlock;
 import net.tomsquared.peony_lib.blocks.custom.PeonyPlushyBlock;
 import net.tomsquared.peony_lib.items.PeonyItems;
 import net.tomsquared.peony_lib.sound.PeonySounds;
+import net.tomsquared.peony_lib.Config;
 
 public class PeonyBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(Registries.BLOCK, Peony_Lib.MOD_ID);
 
-    public static final DeferredHolder<Block, PeonyPlushyBlock> TOM_PLUSHIE = BLOCKS.register("tom_plushie",
+    public static final DeferredRegister<Block> PLUSHIES =
+            DeferredRegister.create(Registries.BLOCK, Peony_Lib.MOD_ID);
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> TOM_PLUSHIE = PLUSHIES.register("tom_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
@@ -37,10 +41,9 @@ public class PeonyBlocks {
                     PeonySounds.TOM_PLUSHIE_VOICE_LINES_8.get(),
                     PeonySounds.TOM_PLUSHIE_VOICE_LINES_9.get(),
                     PeonySounds.TOM_PLUSHIE_VOICE_LINES_10.get()
-
             ));
 
-    public static final DeferredHolder<Block, PeonyPlushyBlock> SHENDI_PLUSHIE = BLOCKS.register("shendi_plushie",
+    public static final DeferredHolder<Block, PeonyPlushyBlock> SHENDI_PLUSHIE = PLUSHIES.register("shendi_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
@@ -59,7 +62,7 @@ public class PeonyBlocks {
                     PeonySounds.SHENDI_PLUSHIE_VOICE_LINE_9.get()
             ));
 
-    public static final DeferredHolder<Block, PeonyPlushyBlock> OVA_PLUSHIE = BLOCKS.register("ova_plushie",
+    public static final DeferredHolder<Block, PeonyPlushyBlock> OVA_PLUSHIE = PLUSHIES.register("ova_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
@@ -69,7 +72,8 @@ public class PeonyBlocks {
 
                     PeonySounds.PLACEHOLDER_2.get()
             ));
-    public static final DeferredHolder<Block, PeonyPlushyBlock> JACK_PLUSHIE = BLOCKS.register("jack_plushie",
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> JACK_PLUSHIE = PLUSHIES.register("jack_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
@@ -87,71 +91,75 @@ public class PeonyBlocks {
                     PeonySounds.JACK_VOICE_LINE_8.get()
             ));
 
-    public static final DeferredHolder<Block, PeonyPlushyBlock> RYAN_PLUSHIE = BLOCKS.register("ryan_plushie",
+    public static final DeferredHolder<Block, PeonyPlushyBlock> RYAN_PLUSHIE = PLUSHIES.register("ryan_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
+
                     PeonySounds.RYAN_PLUSHIE_VOICE_LINES_1.get()
-
             ));
-    public static final DeferredHolder<Block, PeonyPlushyBlock> POTATOWOLFIE_PLUSHIE = BLOCKS.register("potatowolfie_plushie",
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> POTATOWOLFIE_PLUSHIE = PLUSHIES.register("potatowolfie_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
+
                     PeonySounds.PLACEHOLDER_2.get()
-
             ));
-    public static final DeferredHolder<Block, PeonyPlushyBlock> TIE_PLUSHIE = BLOCKS.register("tie_plushie",
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> TIE_PLUSHIE = PLUSHIES.register("tie_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
+
                     PeonySounds.TIE_VOICE_LINE_1.get(),
                     PeonySounds.TIE_VOICE_LINE_2.get(),
                     PeonySounds.TIE_VOICE_LINE_3.get(),
                     PeonySounds.TIE_VOICE_LINE_4.get()
-
             ));
 
-    public static final DeferredHolder<Block, PeonyPlushyBlock> KANINSCHENSPEED_PLUSHIE = BLOCKS.register("kaninschenspeed_plushie",
+    public static final DeferredHolder<Block, PeonyPlushyBlock> KANINSCHENSPEED_PLUSHIE = PLUSHIES.register("kaninschenspeed_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
+
                     PeonySounds.PLACEHOLDER_2.get(),
                     PeonySounds.PLACEHOLDER_1.get()
-
             ));
-    public static final DeferredHolder<Block, PeonyPlushyBlock> EPICCOOL_PLUSHIE = BLOCKS.register("epiccool_plushie",
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> EPICCOOL_PLUSHIE = PLUSHIES.register("epiccool_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
+
                     PeonySounds.PLACEHOLDER_2.get()
-
             ));
-    public static final DeferredHolder<Block, PeonyPlushyBlock> SHALAMBIAN_PLUSHIE = BLOCKS.register("shalambian_plushie",
+
+    public static final DeferredHolder<Block, PeonyPlushyBlock> SHALAMBIAN_PLUSHIE = PLUSHIES.register("shalambian_plushie",
             () -> new PeonyPlushyBlock(
                     BlockBehaviour.Properties.of()
                             .sound(SoundType.WOOL)
                             .strength(0.8F)
                             .destroyTime(0.2f)
                             .noOcclusion(),
+
                     PeonySounds.PLACEHOLDER_2.get(),
                     PeonySounds.PLACEHOLDER_1.get()
-
             ));
 
     public static final DeferredHolder<Block, PeonyFoodBlock> CUBE =
@@ -163,7 +171,6 @@ public class PeonyBlocks {
                                     .destroyTime(0.2f)
                                     .noOcclusion()
                     ));
-
 
     public static final DeferredHolder<Block, FoodPortionBlock> PIZZA =
             BLOCKS.register("portion_cube", () -> new FoodPortionBlock(
@@ -181,5 +188,9 @@ public class PeonyBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+
+        if (Config.plushiesExist()) {
+            PLUSHIES.register(eventBus);
+        }
     }
 }

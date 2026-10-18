@@ -21,7 +21,8 @@ import net.tomsquared.peony_lib.blocks.PeonyBlocks;
 import net.tomsquared.peony_lib.items.PeonyItems;
 import net.tomsquared.peony_lib.sound.PeonySounds;
 import net.tomsquared.peony_lib.utils.PeonyGameRules;
-
+import net.tomsquared.peony_lib.sound.PeonySoundEvents;
+import net.tomsquared.peony_lib.Config;
 
 
 
@@ -32,24 +33,22 @@ public class Peony_Lib {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public Peony_Lib(IEventBus modEventBus, ModContainer modContainer) {
+
+        modContainer.registerConfig(ModConfig.Type.STARTUP, Config.STARTUP_SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
         modEventBus.addListener(this::commonSetup);
-
-
+        modEventBus.addListener(this::addCreative);
 
         PeonySounds.register(modEventBus);
+        PeonySoundEvents.register(modEventBus);
         PeonyBlocks.register(modEventBus);
         PeonyBlockEntities.register(modEventBus);
         PeonyItems.register(modEventBus);
 
-        NeoForge.EVENT_BUS.addListener(
-                BetaNotificationHandler::onPlayerLogin
-        );
-
+        NeoForge.EVENT_BUS.addListener(BetaNotificationHandler::onPlayerLogin);
         NeoForge.EVENT_BUS.register(this);
-
-        modEventBus.addListener(this::addCreative);
-
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -59,16 +58,11 @@ public class Peony_Lib {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
-            event.accept(PeonyItems.TOM_PLUSHIE.get());
-            event.accept(PeonyItems.SHENDI_PLUSHIE.get());
-            event.accept(PeonyItems.OVA_PLUSHIE.get());
-            event.accept(PeonyItems.JACK_PLUSHIE.get());
-            event.accept(PeonyItems.SHALAMBIAN_PLUSHIE.get());
-            event.accept(PeonyItems.KANINSCHENSPEED_PLUSHIE.get());
-            event.accept(PeonyItems.RYAN_PLUSHIE.get());
-            event.accept(PeonyItems.TIE_PLUSHIE.get());
-            event.accept(PeonyItems.POTATOWOLFIE_PLUSHIE.get());
-            event.accept(PeonyItems.EPICCOOL_PLUSHIE.get());
+            if (Config.plushiesExist()) {
+                PeonyItems.PLUSHIES.getEntries().forEach(plushy -> event.accept(plushy.get()));
+            }
+
+
             event.accept(PeonyItems.FULL_PIZZA.get());
             event.accept(PeonyItems.PIZZA_SLICE.get());
             event.accept(PeonyItems.CUBE.get());
