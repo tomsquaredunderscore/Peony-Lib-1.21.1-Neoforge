@@ -32,7 +32,7 @@ Plushies
 - Beta Notifications ✓
     Tom did that for when some mods are detected ✓
 
-- Gamerules/Commands/Configs (4/6)
+- Gamerules/Commands/Configs (5/10)
     showplayernametags ✓
     showplayertablist ✓
     showplayerjoining (joining and leaving in one command) ✓
@@ -100,6 +100,10 @@ Plushies
 - Procedual Dungeon Generation:
 
 
+- Projectile Trajectory thing from that one create addon
+
+
+
 - Posession:
 
 
@@ -121,8 +125,21 @@ Plushies
 - Weapon and Tool class registrations:
     Double Function Item Registration ✓
     Straight up steal my old code from Goober
-        Hammers and all the Specialized tools
+        All the Specialized tools
+        Hammers ✓
+        GreatAxes ✓
+        Mining Range works off of Attributes ✓
+
+
+
+
+        Tunnelborn Enchantment ✓
+        Tree Capitator Enchantment ✓
+
         Backporting the Minecraft Spears 
+
+        Item Models Templates Imported from Goober ✓
+        
 
 
 

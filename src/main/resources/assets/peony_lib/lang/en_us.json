@@ -18,6 +18,8 @@
   "block.peony_lib.potatowolfie_plushie": "Potatowolfie Plushie",
   "block.peony_lib.tie_plushie": "Tietheguy0 Plushie",
   "block.peony_lib.epiccool_plushie": "Epiccool Plushie",
+
+
   "item.peony_lib.tom_plushie.desc": "Original Tom - Mod Owner",
   "item.peony_lib.ryan_plushie.desc": "Original LemonSkyRayan - Cool Creator",
   "item.peony_lib.shendi_plushie.desc": "Original Shendi - Co Mod Owner",
@@ -29,5 +31,15 @@
   "item.peony_lib.tie_plushie.desc": "Original Tietheguy0 - Cool Creator",
   "item.peony_lib.epiccool_plushie.desc": "Original Epiccool - Epic Cool Creator",
   "item.peony_lib.plushie.muted": "Muted",
-  "item.peony_lib.plushie.squeaky": "Squeaky"
+  "item.peony_lib.plushie.squeaky": "Squeaky",
+  "item.peony_lib.iron_hammer": "Iron Hammer",
+  "item.peony_lib.iron_greataxe": "Iron Greataxe",
+
+
+  "attribute.name.peony_lib.mining_radius": "Mining Radius",
+  "attribute.name.peony_lib.tree_felling_limit": "Tree Felling Limit",
+  
+
+  "enchantment.peony_lib.tunnelborn": "Tunnelborn",
+  "enchantment.peony_lib.tree_capitator": "Tree Capitator"
 }

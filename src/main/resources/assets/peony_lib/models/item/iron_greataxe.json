@@ -1,0 +1,6 @@
+{
+  "parent": "peony_lib:item/templates/handheld_scaled",
+  "textures": {
+    "layer0": "peony_lib:item/iron_greataxe"
+  }
+}

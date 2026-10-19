@@ -23,6 +23,7 @@ import net.tomsquared.peony_lib.sound.PeonySounds;
 import net.tomsquared.peony_lib.utils.PeonyGameRules;
 import net.tomsquared.peony_lib.sound.PeonySoundEvents;
 import net.tomsquared.peony_lib.Config;
+import net.tomsquared.peony_lib.attribute.PeonyAttributes;
 
 
 
@@ -45,6 +46,7 @@ public class Peony_Lib {
         PeonyBlocks.register(modEventBus);
         PeonyBlockEntities.register(modEventBus);
         PeonyItems.register(modEventBus);
+        PeonyAttributes.register(modEventBus);
 
         NeoForge.EVENT_BUS.addListener(BetaNotificationHandler::onPlayerLogin);
         NeoForge.EVENT_BUS.register(this);
@@ -67,6 +69,10 @@ public class Peony_Lib {
             event.accept(PeonyItems.PIZZA_SLICE.get());
             event.accept(PeonyItems.CUBE.get());
 
+        }
+                if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(PeonyItems.IRON_HAMMER.get());
+            event.accept(PeonyItems.IRON_GREATAXE.get());
         }
     }
 

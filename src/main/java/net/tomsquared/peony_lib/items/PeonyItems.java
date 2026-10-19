@@ -14,6 +14,9 @@ import net.tomsquared.peony_lib.items.custom.PeonyFoodBlockItem;
 import net.tomsquared.peony_lib.items.custom.PeonyPlushies;
 import net.tomsquared.peony_lib.sound.PeonySounds;
 import net.tomsquared.peony_lib.Config;
+import net.minecraft.world.item.Tiers;
+import net.tomsquared.peony_lib.items.custom.tools.PeonyHammerItem;
+import net.tomsquared.peony_lib.items.custom.tools.PeonyGreataxeItem;
 
 public class PeonyItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -145,6 +148,14 @@ public class PeonyItems {
                             PeonyBlocks.PIZZA.get(),
                             new Item.Properties()
                     ));
+
+    public static final DeferredHolder<Item, PeonyHammerItem> IRON_HAMMER = ITEMS.register("iron_hammer",
+            () -> new PeonyHammerItem(Tiers.IRON, new Item.Properties()));
+
+            
+    public static final DeferredHolder<Item, PeonyGreataxeItem> IRON_GREATAXE = ITEMS.register("iron_greataxe",
+            () -> new PeonyGreataxeItem(Tiers.IRON, new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
