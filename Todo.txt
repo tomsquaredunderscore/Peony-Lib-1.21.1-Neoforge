@@ -43,6 +43,21 @@ Plushies
     Disable Plushies Config ✓
     Vanish
     TPS 
+    /playerlist
+
+
+- Wood (This was all just so that EVERY single type of vein miner works with this shit)
+    Registration of different blockstates
+        Pole ✓
+        Fence ✓
+        Gate (with opening registration) ✓
+        Wall ✓
+        Stair ✓
+        Slab ✓
+        Trapdoor ✓
+        Button (Only the unpressed one and it doesnt work as a button because fuck you) ✓
+    Switch textures between Logs and Wood ✓
+    Modded wood Compatability ✓
 
 
 

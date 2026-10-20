@@ -49,8 +49,8 @@ description='''
  §d§oPeony-Lib is a Library Mod For a handful of mods made by, You guessed it,§r§5§l§o The Peony Dev Team§r§d§o. This Library adds Simple features that we need to have used in my other mods but instead of remaking them we just place them in here to be refrenced to. also adds some §r§5§l§oplushie easter eggs§r§d§o and junk for fun'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
-#[[mixins]]
-#config="${mod_id}.mixins.json"
+[[mixins]]
+config="peony_lib.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
