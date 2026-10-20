@@ -41,9 +41,9 @@ Plushies
     TTS settings (when TTS is integrated)
     Max Attribute admin command (when Attributes are integrated)
     Disable Plushies Config ✓
-    Vanish
-    TPS 
-    /playerlist
+    /Vanish ✓
+    /TPS ✓
+    /playerlist ✓
 
 
 - Wood (This was all just so that EVERY single type of vein miner works with this shit)

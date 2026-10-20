@@ -9,7 +9,10 @@
     "FenceBlockMixin",
     "WallBlockAccess",
     "WallBlockMixin",
-    "FenceGateBlockMixin"
+    "FenceGateBlockMixin",
+    "ServerPlayerVanishMixin",
+    "PlayerInfoPacketAccess",
+    "ServerConnectionVanishMixin"
   ],
   "client": [
     "client.MinecraftPickBlockMixin"
