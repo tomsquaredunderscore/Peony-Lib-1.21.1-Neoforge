@@ -18,12 +18,14 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.tomsquared.peony_lib.blocks.PeonyBlockEntities;
 import net.tomsquared.peony_lib.blocks.PeonyBlocks;
+import net.tomsquared.peony_lib.items.PeonyCreativeTabs;
 import net.tomsquared.peony_lib.items.PeonyItems;
 import net.tomsquared.peony_lib.sound.PeonySounds;
 import net.tomsquared.peony_lib.utils.PeonyGameRules;
 import net.tomsquared.peony_lib.sound.PeonySoundEvents;
 import net.tomsquared.peony_lib.Config;
 import net.tomsquared.peony_lib.attribute.PeonyAttributes;
+import net.tomsquared.peony_lib.items.PeonyCreativeTabs;
 
 
 
@@ -47,6 +49,7 @@ public class Peony_Lib {
         PeonyBlockEntities.register(modEventBus);
         PeonyItems.register(modEventBus);
         PeonyAttributes.register(modEventBus);
+        PeonyCreativeTabs.register(modEventBus);
 
         NeoForge.EVENT_BUS.addListener(BetaNotificationHandler::onPlayerLogin);
         NeoForge.EVENT_BUS.register(this);

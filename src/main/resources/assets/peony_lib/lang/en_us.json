@@ -1,5 +1,8 @@
 {
 
+  "creativeTab.peony_lib.wood_shapes": "Peony Wood",
+
+
   "peony_lib.configuration.title": "Peony Lib Configs",
   "peony_lib.configuration.section.peony_lib.common.toml": "Peony Lib Configs",
   "peony_lib.configuration.section.peony_lib.common.toml.title": "Peony Lib Configs",
